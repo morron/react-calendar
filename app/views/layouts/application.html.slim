@@ -12,6 +12,21 @@ html lang="en"
     = csrf_meta_tag
 
   body
-
-    == yield
-
+    nav.top-bar data-topbar="" role="navigation"
+      ul.title-area
+        li.name
+          h1
+            a href="#"
+              | Motivation
+              strong Calendar
+        /! Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+        li.toggle-topbar.menu-icon
+          a href="#"
+            span Menu
+      section.top-bar-section
+        /! Right Nav Section
+        ul.right
+          li
+            a href="#"  Left Nav Button
+    .small-12.columns
+      == yield
